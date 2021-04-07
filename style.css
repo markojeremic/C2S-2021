@@ -2,9 +2,110 @@
 
 /*font-family: 'Roboto', sans-serif;*/
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#partneri {
+    position: relative;
+    height: 100vh;
+    background: url(img/partneri1.png) no-repeat;
+}
+
+#partneri h2 {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 94px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 8px -8px 10px rgba(0, 0, 0, 0.07), -30px 30px 30px rgba(167, 162, 162, 0.05), -10px 10px 10px rgba(167, 162, 162, 0.1);
+    margin-bottom: 3.5%;
+    padding-top: 2%;
+}
+
+#partneri #partner-bars {
+    position: relative;
+    width: 60%;
+    height: 66.7%;
+    margin: auto;
+}
+
+#partneri #partner-bars .bar {
+    position: relative;
+    width: 100%;
+    height: 30.4%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(74px);
+    border-radius: 15px;
+    margin-bottom: calc((100% - 91.2%)/3);
+}
+
+#tim-i-footer {
+    height: 100vh;
+}
+
+#tim-i-footer #team {
+    height: 80vh;
+    background: url(./img/tim1.png) no-repeat;
+}
+
+#tim-i-footer #team h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 94px;
+    text-align: center;
+    color: #14191C;
+    text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+    margin-bottom: 4.5%;
+    padding-top: 2%;
+}
+
+#tim-i-footer #team .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#tim-i-footer #team .swiper-container .swiper-slide {
+    width: 312px !important;
+    height: 378px !important;
+}
+
+#tim-i-footer #team .swiper-container .swiper-slide .team-card {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    padding-top: 5px;
+    box-sizing: border-box;
+    backdrop-filter: blur(74px);
+    border-radius: 15px;
+}
+
+#tim-i-footer #team .swiper-container .swiper-slide .team-card .team-card-img {
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 292px !important;
+    height: 261px !important;
+}
+
+
+/* Footer treba da se uradi */
+
+#tim-i-footer #footer {
+    height: 20vh;
+    background-color: #14191C;
 }
