@@ -1,10 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
 
 /*font-family: 'Roboto', sans-serif;*/
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*--------------------------------Radionice.css------------------------------------------------*/
+
+#radionice {
+  background: url(./img/Radionice_compressed.png);
+  height: 100vh;
+  background-size: cover;
+}
+.containerRadionice {
+  display: grid;
+  grid-template-areas: "heading" "text";
+  padding: 3% 12%;
+  grid-gap: 5%;
+}
+#radionice h1 {
+  color: white;
+  font-family: Roboto;
+  font-weight: 900;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  grid-area: heading;
+  text-transform: uppercase;
+}
+.radioniceTxt {
+  grid-area: text;
+  color: white;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(74px);
+  border-radius: 15px;
+  height: 70vh;
+  text-align: justify;
+  backdrop-filter: blur(74px);
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+
+/*--------------------------------TechChallenge.css--------------------------------------------*/
+
+#tech-challenge {
+  background: url(./img/TechChallenge_compressed.png);
+  height: 100vh;
+  background-size: cover;
+}
+.containerTech {
+  display: grid;
+  grid-template-areas: "heading" "text";
+  position: relative;
+  top: 10%;
+  left: 15%;
+  width: 40%;
+  padding: 2%;
+  grid-gap: 5%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(74px);
+  border-radius: 15px;
+}
+#tech-challenge h1 {
+  color: white;
+  font-family: Roboto;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  grid-area: heading;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+.techTxt {
+  grid-area: text;
+  color: white;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  height: 70vh;
+  font-weight: 300;
+  text-align: justify;
 }
