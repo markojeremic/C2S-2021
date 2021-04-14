@@ -24,10 +24,13 @@ function invalidname($fullname){
     else return false;
 }
 
-function submitApplication($conn, $fullname,$email,$phone_number,$faculty, $grade, $attend_why){
+function submitApplication($conn, $fullname,$email,$phone_number,$faculty, $grade, $attend_why,
+    $radionica1,$radionica2,$radionica3, $radionice_why,$radionice_experience,$panel,$speed_dating,$microsoft_teams,$spam){
 
    
-    $sql = "INSERT INTO applications (fullname, email, phone_number, faculty, grade, attend_why) VALUES (?,?,?,?,?,?);";
+    $sql = "INSERT INTO applications (fullname, email, phone_number, faculty, grade, attend_why,
+                radionica1,radionica2,radionica3, radionice_why,radionice_experience,panel,speed_dating,microsoft_teams,spam) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../application.php?error=stmtfailed");
@@ -35,7 +38,8 @@ function submitApplication($conn, $fullname,$email,$phone_number,$faculty, $grad
 
     }
     
-        mysqli_stmt_bind_param($stmt, "ssssss", $fullname,$email,$phone_number,$faculty,$grade,$attend_why);
+        mysqli_stmt_bind_param($stmt, "sssssssssssssss", $fullname,$email,$phone_number,$faculty,$grade,$attend_why,
+        $radionica1,$radionica2,$radionica3, $radionice_why,$radionice_experience,$panel,$speed_dating,$microsoft_teams,$spam);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
     

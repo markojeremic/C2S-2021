@@ -8,6 +8,17 @@
     $faculty = $_POST["faculty"];
     $grade = $_POST["grade"];
     $attend_why = $_POST["attend_why"];
+    $radionica1 = $_POST["radionica1"];
+    $radionica2 = $_POST["radionica2"];
+    $radionica3 = $_POST["radionica3"];
+    $radionice_why = $_POST["radionice_why"];
+    $radionice_experience = $_POST["radionice_experience"];
+    $panel= $_POST["panel"];
+    $speed_dating= $_POST["speed_dating"];
+    $microsoft_teams= $_POST["microsoft_teams"];
+    $spam= $_POST["spam"];
+
+
     //$attend_what = $_POST["attend_what"];
 
     
@@ -15,7 +26,7 @@
    require_once 'validation.inc.php';
  
    //Pozivanje validacije i stavljanje gresaka u url
-   if (emptyInput($fullname,$email,$phone_number,$faculty, $grade, $attend_why)!==true) {
+   if (emptyInput($fullname,$email,$phone_number,$faculty, $grade, $attend_why,)!==true) {
         header("location: ../application.php?error=emptyInput");
         exit();   
    }
@@ -31,7 +42,8 @@
     //       }
        //    Ovde cemo dodavati jos validacije npr.
        
-   submitApplication($conn, $fullname,$email,$phone_number,$faculty, $grade, $attend_why);
+   submitApplication($conn, $fullname,$email,$phone_number,$faculty, $grade, $attend_why,
+                    $radionica1,$radionica2,$radionica3,$radionice_why,$radionice_experience,$panel,$speed_dating,$microsoft_teams,$spam);
 
     //Ako nije dosao preko dugmeta za submit vracamo ga na formu
 }else {
