@@ -1,7 +1,7 @@
 <section class ="application-form" style = "margin-left:20px">
 <h2>Prijava</h2>
 
-<form action="includes/application.inc.php" method="post"> 
+<form action="includes/application.inc.php" method="post" enctype="multipart/form-data"> 
     <div class= "basic-info" style = "margin-bottom: 100px">
         <input type="text" name="fullname" placeholder="Ime i prezime..." style="margin-left: 20px" autocomplete="off" >
         <input type="email" name="email" placeholder="Email..."style="margin-left: 20px" autocomplete="off">
@@ -66,8 +66,8 @@
     <input type="checkbox" id="spam" name="spam" value="da" ><br><br>
 
 
-    <!-- <label for="cv">Prilozite svoj cv</label>
-    <input type="file" id="cv" name="cv"><br> -->
+    <label for="cv">Prilozite svoj cv</label>
+    <input type="file" id="cv" name="cv" accept=".pdf"><br>
      
     
     
