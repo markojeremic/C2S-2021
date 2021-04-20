@@ -3,8 +3,8 @@ let hasActive = false;
 let navbarActive = false;
 let activeID = false;
 
-const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda', 'faq', 'partneri', 'tim-i-footer']
-  ; (() => {
+const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda', 'faq', 'partneri', 'tim-i-footer'];
+  (() => {
     new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,
@@ -48,16 +48,6 @@ const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda',
       console.log(navbarActive)
     })
 
-    const isInViewport = (element) => {
-      const elementBox = element.getBoundingClientRect()
-      const distance = 0
-
-      if (elementBox.bottom > distance && elementBox.top <= distance) {
-        return true
-      } else {
-        return false
-      }
-    }
 
 
     $('.hamburger-menu').click(function (e) {
@@ -76,7 +66,7 @@ const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda',
       switch (swiper.activeIndex) {
         case 0:
           !containerWrapper1.classList.contains('should-change') &&
-            containerWrapper1.classList.add('should-change') 
+            containerWrapper1.classList.add('should-change')
           break;
         case 1:
           !containerWrapper2.classList.contains('should-change') &&
@@ -110,7 +100,7 @@ const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda',
         default:
           break;
       }
-     
+
     });
 
     function gotoSlide(numberPage) {
@@ -159,38 +149,38 @@ const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda',
 
     });
 
-  document.onscroll = () => scanDocument()
+    document.onscroll = () => scanDocument()
 
-  const left = document.querySelector('.left');
-  const right = document.querySelector('.right');
+    const left = document.querySelector('.left');
+    const right = document.querySelector('.right');
 
-  const slider = document.querySelector('.slider');
+    const slider = document.querySelector('.slider');
 
-  const indicatorParent = document.querySelector('.control ul'); 
-  const indicators = document.querySelectorAll('.control li');
-  index = 0;
+    const indicatorParent = document.querySelector('.control ul');
+    const indicators = document.querySelectorAll('.control li');
+    index = 0;
 
-  indicators.forEach((indicator, i) => {
-    indicator.addEventListener('click', () => {
-      document.querySelector('.control .selected').classList.remove('selected');
-      indicator.classList.add('selected');
-      slider.style.transform = 'translateX(' + (i) * -25 + '%)';  
-      index = i;
-    
+    indicators.forEach((indicator, i) => {
+      indicator.addEventListener('click', () => {
+        document.querySelector('.control .selected').classList.remove('selected');
+        indicator.classList.add('selected');
+        slider.style.transform = 'translateX(' + (i) * -25 + '%)';
+        index = i;
+
+      });
     });
-  });
 
-  left.addEventListener('click', function() {
-    index = (index > 0) ? index -1 : 0;
-    document.querySelector('.control .selected').classList.remove('selected');
-    indicatorParent.children[index].classList.add('selected');
-    slider.style.transform = 'translateX(' + (index) * -20 + '%)';
-  });
+    left.addEventListener('click', function () {
+      index = (index > 0) ? index - 1 : 0;
+      document.querySelector('.control .selected').classList.remove('selected');
+      indicatorParent.children[index].classList.add('selected');
+      slider.style.transform = 'translateX(' + (index) * -20 + '%)';
+    });
 
-  right.addEventListener('click', function() {
-    index = (index < 5 - 1) ? index + 1 : 4;
-    document.querySelector('.control .selected').classList.remove('selected');
-    indicatorParent.children[index].classList.add('selected');
-    slider.style.transform = 'translateX(' + (index) * -20 + '%)';
-  });
-})()
+    right.addEventListener('click', function () {
+      index = (index < 5 - 1) ? index + 1 : 4;
+      document.querySelector('.control .selected').classList.remove('selected');
+      indicatorParent.children[index].classList.add('selected');
+      slider.style.transform = 'translateX(' + (index) * -20 + '%)';
+    });
+  })()
