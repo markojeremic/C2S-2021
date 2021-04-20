@@ -8,6 +8,44 @@
   box-sizing: border-box;
 }
 
+/*  */
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+	color:#cc1f38 !important;
+	background-color:#cc1f38 !important;
+}
 /*--------------------------------Radionice.css------------------------------------------------*/
 
 #radionice {
@@ -350,7 +388,7 @@
 
 /****************  NAVBAR, HEADER, O PROJEKTU   *****************/
 .height-100 {
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .main-container {

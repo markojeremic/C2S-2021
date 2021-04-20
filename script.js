@@ -1,91 +1,163 @@
-;(() => {
-  var swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 30,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  })
+let active = false;
+let hasActive = false;
+let navbarActive = false;
+let activeID = false;
 
-  const hamburger_menu = document.querySelector('.hamburger-menu')
-  const mainContainer = document.querySelector('.main-container')
+const slides = ['header', 'o-projektu', 'radionice', 'tech-challenge', 'agenda', 'faq', 'partneri', 'tim-i-footer']
+  ; (() => {
+    new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    })
 
-  hamburger_menu.addEventListener('click', () => {
-    mainContainer.classList.toggle('active')
-  })
+    const swiper = new Swiper('.main-container', {
+      direction: 'vertical',
+      slidesPerView: 1,
+      speed: 1000,
+      spaceBetween: 0,
+      mousewheel: true,
+      autoHeight: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
 
-  const isInViewport = (element) => {
-    const elementBox = element.getBoundingClientRect()
-    const distance = 0
+    const hamburger_menu = document.querySelector('.hamburger-menu')
+    const mainContainer = document.querySelector('.main-container')
 
-    if (elementBox.bottom > distance && elementBox.top <= distance) {
-      return true
-    } else {
-      return false
-    }
-  }
 
-  const scanDocument = () => {
-    const containerWrapper1 = document.querySelector('.container-wrapper')
-    const containerWrapper2 = document.querySelector('.container-wrapper-2')
-    const containerWrapper3 = document.querySelector('.container-wrapper-3')
-    const containerWrapper4 = document.querySelector('.container-wrapper-4')
-    const containerWrapper5 = document.querySelector('.container-wrapper-5')
-    const containerWrapper6 = document.querySelector('.container-wrapper-6')
-    const containerWrapper7 = document.querySelector('.container-wrapper-7')
-    const containerWrapper8 = document.querySelector('.container-wrapper-8')
+    hamburger_menu.addEventListener('click', () => {
+      console.log("eej")
+      if ($(".main-container").hasClass('active'))
+        navbarActive = false
+      else navbarActive = true;
+      mainContainer.classList.toggle('active')
+      console.log(navbarActive)
+    })
 
-    if (isInViewport(containerWrapper1)) {
-      !containerWrapper1.classList.contains('should-change') &&
-        containerWrapper1.classList.add('should-change')
-    } else {
-      containerWrapper1.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper2)) {
-      containerWrapper2.classList.add('should-change')
-    } else {
-      containerWrapper2.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper3)) {
-      containerWrapper3.classList.add('should-change')
-    } else {
-      containerWrapper3.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper4)) {
-      containerWrapper4.classList.add('should-change')
-    } else {
-      containerWrapper4.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper5)) {
-      containerWrapper5.classList.add('should-change')
-    } else {
-      containerWrapper5.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper6)) {
-      containerWrapper6.classList.add('should-change')
-    } else {
-      containerWrapper6.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper7)) {
-      containerWrapper7.classList.add('should-change')
-    } else {
-      containerWrapper7.classList.remove('should-change')
-    }
-    if (isInViewport(containerWrapper8)) {
-      containerWrapper8.classList.add('should-change')
-    } else {
-      containerWrapper8.classList.remove('should-change')
-    }
-  }
+    const isInViewport = (element) => {
+      const elementBox = element.getBoundingClientRect()
+      const distance = 0
 
-  document.onscroll = () => scanDocument()
-})()
+      if (elementBox.bottom > distance && elementBox.top <= distance) {
+        return true
+      } else {
+        return false
+      }
+    }
+
+
+    $('.hamburger-menu').click(function (e) {
+      e.preventDefault();
+
+      const containerWrapper1 = document.querySelector('.container-wrapper')
+      const containerWrapper2 = document.querySelector('.container-wrapper-2')
+      const containerWrapper3 = document.querySelector('.container-wrapper-3')
+      const containerWrapper4 = document.querySelector('.container-wrapper-4')
+      const containerWrapper5 = document.querySelector('.container-wrapper-5')
+      const containerWrapper6 = document.querySelector('.container-wrapper-6')
+      const containerWrapper7 = document.querySelector('.container-wrapper-7')
+      const containerWrapper8 = document.querySelector('.container-wrapper-8')
+
+      console.log(swiper.activeIndex)
+      switch (swiper.activeIndex) {
+        case 0:
+          !containerWrapper1.classList.contains('should-change') &&
+            containerWrapper1.classList.add('should-change') 
+          break;
+        case 1:
+          !containerWrapper2.classList.contains('should-change') &&
+            containerWrapper2.classList.add('should-change')
+          break;
+        case 2:
+          !containerWrapper3.classList.contains('should-change') &&
+            containerWrapper3.classList.add('should-change')
+          break;
+        case 3:
+          !containerWrapper4.classList.contains('should-change') &&
+            containerWrapper4.classList.add('should-change')
+          break;
+        case 4:
+          !containerWrapper5.classList.contains('should-change') &&
+            containerWrapper5.classList.add('should-change')
+          break;
+        case 5:
+          !containerWrapper6.classList.contains('should-change') &&
+            containerWrapper6.classList.add('should-change')
+          break;
+        case 6:
+          !containerWrapper7.classList.contains('should-change') &&
+            containerWrapper7.classList.add('should-change')
+          break;
+        case 6:
+          !containerWrapper8.classList.contains('should-change') &&
+            containerWrapper8.classList.add('should-change')
+          break;
+
+        default:
+          break;
+      }
+     
+    });
+
+    function gotoSlide(numberPage) {
+      swiper.slideTo(numberPage, 0, false)
+    }
+
+
+
+
+
+    $('.navbar-active-link').hover(function (e) {
+      e.preventDefault();
+      if (navbarActive) {
+        const currentlyActiveWrapper = $('body').find('.should-change');
+        const currentlyActiveSection = currentlyActiveWrapper.find('.main');
+        if (!hasActive) {
+          active = currentlyActiveSection.html();
+          activeID = currentlyActiveWrapper.find('section').attr('id');
+          console.log(active)
+          hasActive = true;
+        }
+        const hoveredSectionID = $(this).attr('should-show');
+        let sectionToShow = $(`#${hoveredSectionID}`).parent().html();
+        if ($(this).attr('should-show') == activeID)
+          sectionToShow = active
+
+        currentlyActiveSection.html(sectionToShow);
+      }
+    });
+
+
+    $('.navbar-active-link').click(function (e) {
+      e.preventDefault();
+      navbarActive = false;
+      mainContainer.classList.toggle('active')
+      if ($(this).attr('should-show') == activeID)
+        sectionToShow = active
+
+      setTimeout(() => {
+        const clickedSectionID = $(this).attr('should-show');
+        const currentlyActiveWrapper = $('body').find('.should-change');
+        const currentlyActiveSection = currentlyActiveWrapper.find('.main');
+        currentlyActiveSection.html(active);
+        gotoSlide(slides.indexOf(clickedSectionID))
+      }, 600);
+
+    });
+
+
+  })()
