@@ -50,7 +50,7 @@ body {
 
 #radionice {
   background: url(./img/Radionice_compressed.png);
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
 }
 .containerRadionice {
@@ -92,7 +92,7 @@ body {
 
 #tech-challenge {
   background: url(./img/TechChallenge_compressed.png);
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
 }
 .containerTech {
@@ -132,6 +132,97 @@ body {
   text-align: justify;
 }
 /*--------------------------------------------------------------------------------------------------*/
+
+
+
+/*-------------------------------AGENDA-------------------------------*/
+
+#agenda {
+  min-height: 100vh;
+  position: relative;
+  background: url(./img/Agenda1_compressed.jpg) no-repeat;
+}
+
+#agenda h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 94px;
+  text-align: center;
+  color: #14191C;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  margin-bottom: 50px;
+}
+
+.agenda-container {
+  width: 50%;
+  margin: auto;
+}
+.carousel {
+
+  /* Note: backdrop-filter has minimal browser support */
+  backdrop-filter: blur(35px);
+  border: 1px solid #FFFFFF;
+  border-radius: 15px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.slider {
+  display: flex;
+  height: 100%;
+  width: 500%;
+}
+.slider section {
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.left, .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.arrow i {
+  font-size: 70px;
+  -webkit-user-select: none;
+  color: #333;
+}
+.left {
+  left: 10px;
+}
+.right {
+  right: 10px;
+}
+.control ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%);
+}
+.control ul li {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: 2px solid #333;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+.control ul li.selected {
+  background: transparent;
+}
+/*------------------------------------------KRAJ AGENDA--------------------------------------------*/
 
 #partneri {
   position: relative;
