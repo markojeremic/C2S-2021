@@ -1,4 +1,4 @@
-;(() => {
+(() => {
   let active = false
   let hasActive = false
   let navbarActive = false
@@ -39,6 +39,7 @@
     spaceBetween: 0,
     mousewheel: true,
     autoHeight: false,
+    allowTouchMove: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -139,8 +140,30 @@
       'transform',
       `translateY(${100 * swiper.activeIndex}vh)`
     )
-    console.log(100 * swiper.activeIndex)
+    toggleNavigation();
+
+
+
+    if (!navbarActive && active) {
+      console.log(active);
+      let currentlyActiveWrapper;
+      let currentlyActiveSection;
+
+      currentlyActiveWrapper = $('body').find('.should-change')
+      currentlyActiveSection = currentlyActiveWrapper.find('.main')
+
+      currentlyActiveSection.html(active)
+    }
   })
+
+  function toggleNavigation() {
+    swiper.allowTouchMove = !swiper.allowTouchMove
+    swiper.mousewheel.enabled ? swiper.mousewheel.disable() : swiper.mousewheel.enable();
+    swiper.keyboard.enabled ? swiper.keyboard.disable() : swiper.keyboard.enable();
+    $('.swiper-pagination').hasClass('swiper-button-lock') ?
+      $('.swiper-pagination').removeClass('swiper-button-lock') :
+      $('.swiper-pagination').addClass('swiper-button-lock');
+  }
 
   function gotoSlide(numberPage) {
     swiper.slideTo(numberPage, 0, false)
@@ -148,6 +171,7 @@
 
   $('.navbar-active-link').hover(function (e) {
     e.preventDefault()
+
     if (navbarActive) {
       const currentlyActiveWrapper = $('body').find('.should-change')
       const currentlyActiveSection = currentlyActiveWrapper.find('.main')
@@ -166,12 +190,9 @@
     }
   })
 
-  if (navbarActive) {
-    swiper.mousewheel = true
-  }
-
   $('.navbar-active-link').click(function (e) {
     e.preventDefault()
+    toggleNavigation();
     navbarActive = false
     hasActive = false
     mainContainer.classList.toggle('active')
@@ -184,6 +205,7 @@
       currentlyActiveSection.html(active)
       gotoSlide(slides.indexOf(clickedSectionID))
     }, 600)
+
   })
 
   document.onscroll = () => scanDocument()
@@ -224,24 +246,24 @@
   const firstAccordionItemBodies = document.querySelectorAll(".accordion-item-body");
   firstAccordionItemBodies[0].style.maxHeight = "100px";
 
-accordionItemHeaders.forEach(accordionItemHeader => {
-  accordionItemHeader.addEventListener("click", event => {
-    firstAccordionItemBodies[0].style.maxHeight = 0;
-    const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-     if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-      currentlyActiveAccordionItemHeader.classList.toggle("active");
-      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-     }
+  accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+      firstAccordionItemBodies[0].style.maxHeight = 0;
+      const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+      if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
+        currentlyActiveAccordionItemHeader.classList.toggle("active");
+        currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+      }
 
-    accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
-    if(accordionItemHeader.classList.contains("active")) {
-      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-    }
-    else {
-      accordionItemBody.style.maxHeight = 0;
-    }
-    
+      accordionItemHeader.classList.toggle("active");
+      const accordionItemBody = accordionItemHeader.nextElementSibling;
+      if (accordionItemHeader.classList.contains("active")) {
+        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+      }
+      else {
+        accordionItemBody.style.maxHeight = 0;
+      }
+
+    });
   });
-});
 })()
