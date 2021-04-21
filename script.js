@@ -219,4 +219,29 @@
     indicatorParent.children[index].classList.add('selected')
     slider.style.transform = 'translateX(' + index * -20 + '%)'
   })
+
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+  const firstAccordionItemBodies = document.querySelectorAll(".accordion-item-body");
+  firstAccordionItemBodies[0].style.maxHeight = "100px";
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+    firstAccordionItemBodies[0].style.maxHeight = 0;
+    const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+     if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+      currentlyActiveAccordionItemHeader.classList.toggle("active");
+      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+     }
+
+    accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+    
+  });
+});
 })()
