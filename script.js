@@ -20,6 +20,7 @@
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
+    initialSlide: 3,
     coverflowEffect: {
       rotate: 30,
       stretch: 0,
@@ -27,9 +28,7 @@
       modifier: 1,
       slideShadows: true,
     },
-    pagination: {
-      el: '.swiper-pagination',
-    },
+    
   })
 
   const swiper = new Swiper('.main-container', {
