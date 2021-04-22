@@ -122,7 +122,7 @@ if(isset($_GET["error"])){
 <style>
    
 body{
-    background: url("img/pozadinaprijave.jpg")no-repeat ;
+    background: url("img/pozadinaprijave.jpg")no-repeat fixed ;
     background-size: cover;
     color: white;
  
