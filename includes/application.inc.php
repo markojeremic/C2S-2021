@@ -26,7 +26,7 @@
 
  
    //Pozivanje validacije i stavljanje gresaka u url
-   if (emptyInput($fullname,$email,$phone_number,$faculty, $grade, $attend_why,)!==true) {
+   if (emptyInput($fullname,$email,$phone_number,$faculty, $grade, $attend_why)!==true) {
         header("location: ../application.php?error=emptyInput");
         exit();   
    }

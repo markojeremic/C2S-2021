@@ -10,22 +10,22 @@
         
             <div class="inputfield">
                 <label for="fullname">Ime i prezime:</label>
-                <input type="text" name="fullname" placeholder=" Ime i prezime..."  autocomplete="off" > <br>
+                <input type="text" name="fullname" placeholder=" Ime i prezime..."  autocomplete="off" class="osnovni-podaci"> <br>
             </div>
 
             <div class="inputfield">
                 <label for="mail">Email:</label>
-                <input id="mail" type="email" name="email" placeholder=" Email..." style="margin-left: 60px;" > <br>
+                <input id="mail" type="email" name="email" placeholder=" Email..." style="margin-left: 65px;" class="osnovni-podaci"> <br>
             </div>
 
             <div class="inputfield">
                 <label for="fullname">Broj telefona:</label>
-                <input type="text" name="phone_number" placeholder=" Broj telefona... " style="margin-left: 15px;" autocomplete="off">  <br>
+                <input type="text" name="phone_number" placeholder=" Broj telefona... " style="margin-left: 15px;" autocomplete="off" class="osnovni-podaci">  <br>
             </div>
 
             <div class="inputfield">
                 <label for="faculty">Fakultet:</label>
-                <input type="text" name="faculty" placeholder=" Fakultet..." autocomplete="off" style="margin-left: 48px;margin-bottom: 15px;" ><br>
+                <input type="text" name="faculty" placeholder=" Fakultet..." autocomplete="off" style="margin-left: 48px;margin-bottom: 15px;" class="osnovni-podaci"><br>
             </div>
 
             <div class="inputfield">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div style="margin-top:20px ;">Zašto ste odlučili da učestvujete na ovom projektu?</div>
-            <textarea name="attend_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea>
+            <textarea name="attend_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" class="zasto"></textarea>
         
         </div>
 
@@ -98,7 +98,7 @@
             <label for="cv">Priložite svoj CV </label>
             <input type="file" id="cv" name="cv" accept=".pdf"><br>
 
-            <button type="submit" name="submit">Sačuvaj</button>
+            <button type="submit" name="submit" class="sacuvaj-prijava">Sačuvaj</button>
         </div>
 
     </form>
@@ -126,7 +126,7 @@ if(isset($_GET["error"])){
 <style>
    
 body{
-    background: url("img/pozadinaprijave.jpg")no-repeat fixed ;
+    background: url("img/pozadinaprijava.jpg")no-repeat fixed ;
     background-size: cover;
     color: white;
  
@@ -136,13 +136,26 @@ textarea{
     resize: none;
        
 }
+
+.zasto {
+    height: 280px;
+    margin-top: 5px;
+}
+
+.osnovni-podaci {
+    height: 30px;
+    padding: 0.25rem;
+}
+
 .prijava-wrapper {
 
   max-width: 1500px;
   width: 100%;
-  margin: 50px auto;
+  margin: 1rem auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
-  padding: 30px;
+  padding: 0.5rem;
+  font-family: Roboto;
+  font-weight: 300;
 }
 
 .prijava-wrapper .form  {
@@ -248,7 +261,6 @@ textarea{
 
         
     h2 {
-        margin-top: 120px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
@@ -263,6 +275,10 @@ textarea{
     .basic-info{
         text-align: center;
         width: 100%;
+    }
+
+    .sacuvaj-prijava {
+        margin-top: 1rem;
     }
 
  </style> 
