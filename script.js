@@ -15,6 +15,8 @@
     'tim-i-footer',
   ]
 
+  // Tim
+
   new Swiper('.swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
@@ -28,8 +30,10 @@
       modifier: 1,
       slideShadows: true,
     },
-    
+
   })
+
+  // Skrol po sekcijama
 
   const swiper = new Swiper('.main-container', {
     direction: 'vertical',
@@ -48,6 +52,93 @@
       onlyInViewport: false,
     },
   })
+
+  // Caroussel generalni
+
+  const generalni = new Swiper('.swiper-generalni', {
+    speed: 5000,
+    spaceBetween: 0,
+    initialSlide: 2,
+    autoHeight: false,
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    loopedSlides: 50,
+
+    effect: 'slide',
+    slidesPerView: 2,
+    centeredSlides: true,
+    grabCursor: true,
+  })
+  // Caroussel naturalni
+
+  const naturalni = new Swiper('.swiper-naturalni', {
+    speed: 1000,
+    spaceBetween: 0,
+    initialSlide: 3,
+    autoHeight: false,
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    loopedSlides: 50,
+
+    effect: 'slide',
+    slidesPerView: 2,
+    centeredSlides: true,
+    grabCursor: true,
+  })
+  // Caroussel medijski
+
+  const medijski = new Swiper('.swiper-medijski', {
+    speed: 3000,
+    spaceBetween: 0,
+    initialSlide: 1,
+    autoHeight: false,
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    loopedSlides: 50,
+
+    effect: 'slide',
+    slidesPerView: 2,
+    centeredSlides: true,
+    grabCursor: true,
+  })
+
+  $('.swiper-generalni').hover(function () {
+
+    generalni.autoplay.stop();
+    
+  }, function () {
+    generalni.autoplay.start();
+  }
+  );
+  $('.swiper-naturalni').hover(function () {
+    naturalni.autoplay.stop();
+    
+  }, function () {
+    naturalni.autoplay.start();
+  }
+  );
+  $('.swiper-medijski').hover(function () {
+    medijski.autoplay.stop();
+    
+  }, function () {
+    medijski.autoplay.start();
+  }
+  );
 
   const hamburger_menu = document.querySelector('.hamburger-menu')
   const mainContainer = document.querySelector('.main-container')

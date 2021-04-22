@@ -17,6 +17,9 @@
     $speed_dating= $_POST["speed_dating"];
     $microsoft_teams= $_POST["microsoft_teams"];
     $spam= $_POST["spam"];
+    $cv= $_FILES["cv"]["name"];
+    
+    
     
       
 
@@ -26,7 +29,7 @@
 
  
    //Pozivanje validacije i stavljanje gresaka u url
-   if (emptyInput($fullname,$email,$phone_number,$faculty, $grade, $attend_why,)!==true) {
+   if (emptyInput($fullname,$email,$phone_number,$faculty, $grade, $attend_why,$radionica1,$radionica2,$radionice_experience,$radionice_why)!==true) {
         header("location: ../application.php?error=emptyInput");
         exit();   
    }
@@ -34,6 +37,15 @@
         header("location: ../application.php?error=invalidEmail");
         exit();   
    }
+   if (emptyCv($speed_dating,$cv)==false) {
+    header("location: ../application.php?error=CvRequired");
+    exit();   
+}
+   
+  //  if(invalidNumber($phone_number)==false){
+  //   header("location: ../application.php?error=invalidNumber");
+
+  //  }
 
    //Upload cv-a
    $target_dir = "../uploads/";

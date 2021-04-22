@@ -22,8 +22,9 @@ body {
   margin-right: auto;
 }
 
+.main-container,
+.swiper-wrapper,
 .swiper-slide {
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -37,7 +38,6 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
-
 .swiper-pagination-bullet-active {
   color: #cc1f38 !important;
   background-color: #cc1f38 !important;
@@ -579,6 +579,77 @@ img {
   backdrop-filter: blur(74px);
   border-radius: 15px;
   margin-bottom: calc((100% - 91.2%) / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-generalni {
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  height: 60%;
+}
+.general-logo {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 150px !important;
+  height: 261px !important;
+}
+.swiper-generalni .swiper-wrapper {
+  position: relative;
+  width: 10000%;
+}
+
+.swiper-generalni .swiper-slide {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 292px !important;
+  height: 261px !important;
+}
+.swiper-naturalni {
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  height: 60%;
+}
+
+.swiper-naturalni .swiper-wrapper {
+  position: relative;
+  width: 10000%;
+}
+
+.swiper-naturalni .swiper-slide {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 292px !important;
+  height: 261px !important;
+}
+.swiper-medijski {
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  height: 60%;
+}
+
+.swiper-medijski .swiper-wrapper {
+  position: relative;
+  width: 10000%;
+}
+
+.swiper-medijski .swiper-slide {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 292px !important;
+  height: 261px !important;
 }
 
 #tim-i-footer {
@@ -641,8 +712,54 @@ img {
 #tim-i-footer #footer {
   height: 20vh;
   background-color: #14191c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
+#footer-logo {
+  margin-top: 1.5rem;
+  margin-left: 2.5rem;
+  width: 50%;
+}
+#footer-logo img {
+  width: 250px;
+  height: 90px;
+}
+
+#kontakt-ikonice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2.5rem;
+  width: 20%;
+}
+
+#kontakt-ikonice i {
+  color: #fff;
+  transition: color 0.5s;
+}
+
+#kontakt-ikonice a {
+  height: 3rem;
+  display: flex;
+  width: 3rem;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+  background: linear-gradient(
+    168.53deg,
+    rgba(234, 255, 254, 0.5) 0%,
+    rgba(201, 217, 241, 0.5) 97.46%
+  );
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+#kontakt-ikonice a:hover > i {
+  color: #cc1f38;
+}
 /*---------------------------media queries------------------------------------------*/
 
 @media (max-width: 1400px) {
@@ -1085,6 +1202,18 @@ ul {
 .img-wrapper {
   min-width: 17rem;
   width: 60%;
+  animation: fade-in 1s ease-out 0s 1 alternate both;
+}
+
+@keyframes fade-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0.2;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .img-wrapper img {
@@ -1106,13 +1235,52 @@ ul {
   font-weight: 900;
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
-  color: #fff;
-  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
-    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  animation: blurToSharpWhite 1.6s ease-in 1s 1 alternate both;
+}
+
+#header .title h1 span {
+  animation: blurToSharpRed 1.6s ease-in 1s 1 alternate both;
+}
+
+@keyframes blurToSharpWhite {
+  0% {
+    color: transparent;
+    text-shadow: 0 0 15px rgba(255, 255, 255);
+  }
+
+  100% {
+    opacity: 1;
+    color: #fff;
+    text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07);
+  }
+}
+
+@keyframes blurToSharpRed {
+  0% {
+    color: transparent;
+    text-shadow: 0 0 15px rgba(204, 30, 57);
+  }
+
+  100% {
+    color: #cc1e39;
+    text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07);
+  }
 }
 
 .button-wrapper {
   padding-left: 0.4rem;
+  animation: leftToRight 1.5s cubic-bezier(0.35, 1.3, 1, 1) 1.5s 1 alternate
+    both;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 button {
