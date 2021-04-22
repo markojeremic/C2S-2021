@@ -5,27 +5,49 @@
     <div class="title">
     <h2>Prijava</h2>
     </div>
+    <div class="errorhandle">
+                <?php
+                    
+                    if(isset($_GET["error"])){
+                        if($_GET["error"]=="emptyInput"){
+                            echo "<p>Popunite sva polja </p>";
+                        }
+                        if($_GET["error"]=="invalidEmail"){ 
+                            echo "<p>Molimo unesite validan mejl </p>";
+                        }
+                        if($_GET["error"]=="stmtfailed"){
+                            echo "<p>Doslo je do greske, pokusajte ponovo</p>";
+                        }
+                        if($_GET["error"]=="CvRequired"){
+                            echo "<p>Obavezan Cv ako se ide na speed dating</p>";
+                        }
+                        if($_GET["error"]=="none"){
+                            echo "<p>Vaša prijava je predata! Hvala</p>";
+                        }
+                    }
+                ?>
+            </div>
     <form action="includes/application.inc.php" method="post" enctype="multipart/form-data"> 
         <div class= "basic-info" style = "margin-bottom: 50px">
         
             <div class="inputfield">
                 <label for="fullname">Ime i prezime:</label>
-                <input type="text" name="fullname" placeholder=" Ime i prezime..."  autocomplete="off" class="osnovni-podaci"> <br>
+                <input type="text" name="fullname" placeholder=" Ime i prezime..."  autocomplete="off" class="osnovni-podaci" maxlength="45" >  <br>
             </div>
 
             <div class="inputfield">
                 <label for="mail">Email:</label>
-                <input id="mail" type="email" name="email" placeholder=" Email..." style="margin-left: 65px;" class="osnovni-podaci"> <br>
+                <input id="mail" type="email" name="email" placeholder=" Email..." style="margin-left: 65px;" class="osnovni-podaci" maxlength="45">  <br>
             </div>
 
             <div class="inputfield">
                 <label for="fullname">Broj telefona:</label>
-                <input type="text" name="phone_number" placeholder=" Broj telefona... " style="margin-left: 15px;" autocomplete="off" class="osnovni-podaci">  <br>
+                <input type="text" name="phone_number" placeholder=" Broj telefona... " style="margin-left: 15px;" autocomplete="off" class="osnovni-podaci" maxlength="45">  <br>
             </div>
 
             <div class="inputfield">
                 <label for="faculty">Fakultet:</label>
-                <input type="text" name="faculty" placeholder=" Fakultet..." autocomplete="off" style="margin-left: 48px;margin-bottom: 15px;" class="osnovni-podaci"><br>
+                <input type="text" name="faculty" placeholder=" Fakultet..." autocomplete="off" style="margin-left: 48px;margin-bottom: 15px;" class="osnovni-podaci" maxlength="45" > <br>
             </div>
 
             <div class="inputfield">
@@ -44,7 +66,7 @@
                 </div>
             </div>
             <div style="margin-top:20px ;">Zašto ste odlučili da učestvujete na ovom projektu?</div>
-            <textarea name="attend_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" class="zasto"></textarea>
+            <textarea name="attend_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="255" class="zasto"></textarea>
         
         </div>
 
@@ -66,11 +88,11 @@
 
         <div class="inputField" id = "extraquestions" style="display:none; margin-bottom:50px ;">
         
-            <div style="margin-top:20px ;">Šta Vas je motivisalo da odaberete ove radionice? </div>
-            <textarea name="radionice_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea><br>
+            <div style="margin-top:20px ;">Šta Vas je motivisalo da odaberete ovu radionicu </div>
+            <textarea name="radionice_why"  autocomplete="off" cols="50" rows="4" maxlength="255" ></textarea><br>
 
             <div style="margin-top:20px ;">Koliko ste upoznati sa tehnologijama koje se obrađuju na radionicama koje ste odabrali?</div>
-            <textarea name="radionice_experience" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea><br>
+            <textarea name="radionice_experience"  autocomplete="off" cols="50" rows="4" maxlength="255" ></textarea><br>
         </div>
 
         <div class="prijava-questions">
@@ -81,7 +103,7 @@
             </div>
 
             <div class="inputfield">
-                <label for="speed_dating"> Da li želite da učestvujete na speed dating-u sa kompanijom Levi9? </label>
+                <label for="speed_dating"> Da li želite da učestvujete na speed dating-u sa kompanijom Levi9? (CV obavezan)</label>
                 <input type="checkbox" id="speed_dating" name="speed_dating" value="da" ><br><br>
                 </div>
 
@@ -95,32 +117,25 @@
                 <input type="checkbox" id="spam" name="spam" value="da" ><br><br>
             </div>
 
-            <label for="cv">Priložite svoj CV </label>
+            <label for="cv">Priložite svoj CV (.pdf) </label>
             <input type="file" id="cv" name="cv" accept=".pdf"><br>
 
             <button type="submit" name="submit" class="sacuvaj-prijava">Sačuvaj</button>
+            <div class="errorhandle">
+                <?php
+                    
+                    if(isset($_GET["error"])){
+                        if($_GET["error"]=="none"){
+                            echo "<p>Vaša prijava je predata! Hvala</p>";
+                        }
+                    }
+                ?>
+            </div>
         </div>
-
+        
     </form>
 </div>
-<?php
-// Moramo nekako pametnije da namestimo ovo ispisivanje gresaka, 
-if(isset($_GET["error"])){
-    if($_GET["error"]=="emptyInput"){
-        echo "<p>Fill in all fields </p>";
-    }
-    if($_GET["error"]=="invalidEmail"){ 
-        echo "<p>Molimo unesite validan mejl </p>";
-    }
-    if($_GET["error"]=="stmtfailed"){
-        echo "<p>Doslo je do greske, pokusajte ponovo</p>";
-    }
-    if($_GET["error"]=="none"){
-        echo "<p>Uspesno ste predali prijavu</p>";
-    }
-}
-?>
-
+    
 
 
 <style>
@@ -269,7 +284,7 @@ textarea{
         text-align: center;
         color: #FFFFFF;
         text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .basic-info{
@@ -279,6 +294,12 @@ textarea{
 
     .sacuvaj-prijava {
         margin-top: 1rem;
+    }
+
+    .errorhandle{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
 
  </style> 
