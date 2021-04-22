@@ -243,7 +243,7 @@
 
   const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
   const firstAccordionItemBodies = document.querySelectorAll(".accordion-item-body");
-  firstAccordionItemBodies[0].style.maxHeight = "100px";
+  
 
   accordionItemHeaders.forEach(accordionItemHeader => {
     accordionItemHeader.addEventListener("click", event => {

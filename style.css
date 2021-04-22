@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;900&display=swap');
 
 /*font-family: 'Roboto', sans-serif;*/
 
@@ -179,10 +179,66 @@ body {
 }
 .slider section {
   flex-basis: 100%;
-  justify-content: center;
-  align-items: center;
   display: flex;
+  flex-direction: column;
 }
+
+.slider section h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  height: 36px;
+}
+
+
+
+.slider section .maj-11,.maj-12,.maj-13 {
+  margin-bottom: 4rem;
+}
+
+.slider section .maj-14 {
+  margin-bottom: 7.5rem;
+}
+
+.slider section ul {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+.slider section ul li {
+  margin: 1rem;
+}
+
+.slider section ul li h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+
+  color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slider section li p {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+
 .left, .right {
   position: absolute;
   top: 50%;
@@ -195,10 +251,10 @@ body {
   color: #333;
 }
 .left {
-  left: 10px;
+  left: 5rem;
 }
 .right {
-  right: 10px;
+  right: 5rem;
 }
 .control ul {
   list-style: none;
@@ -216,12 +272,34 @@ body {
   background: #333;
   border: 2px solid #333;
   border-radius: 50px;
-  margin: 10px;
+  margin: 20px;
   cursor: pointer;
 }
 .control ul li.selected {
   background: transparent;
 }
+
+@media (max-width: 767.98px) {
+  .slider section ul li h4 {
+    font-size: 1.1rem;
+  }
+
+  .slider section ul li p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 495px) {
+  .slider section ul li h4 {
+    font-size: 0.9rem;
+  }
+
+  .slider section ul li p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /*------------------------------------------KRAJ AGENDA--------------------------------------------*/
 
 
