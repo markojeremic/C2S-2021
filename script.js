@@ -71,6 +71,7 @@
     const containerWrapper6 = document.querySelector('.container-wrapper-6')
     const containerWrapper7 = document.querySelector('.container-wrapper-7')
     const containerWrapper8 = document.querySelector('.container-wrapper-8')
+    const containerWrapper9 = document.querySelector('.container-wrapper-9')
 
     if (containerWrapper1.classList.contains('should-change'))
       containerWrapper1.classList.remove('should-change')
@@ -88,6 +89,8 @@
       containerWrapper7.classList.remove('should-change')
     if (containerWrapper8.classList.contains('should-change'))
       containerWrapper8.classList.remove('should-change')
+    if (containerWrapper9.classList.contains('should-change'))
+      containerWrapper9.classList.remove('should-change')
 
     switch (swiper.activeIndex) {
       case 0:
@@ -121,6 +124,10 @@
       case 7:
         !containerWrapper8.classList.contains('should-change') &&
           containerWrapper8.classList.add('should-change')
+        break
+      case 8:
+        !containerWrapper9.classList.contains('should-change') &&
+          containerWrapper9.classList.add('should-change')
         break
 
       default:

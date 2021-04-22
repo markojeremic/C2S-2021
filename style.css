@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;900&display=swap");
 
 /*font-family: 'Roboto', sans-serif;*/
 
@@ -11,129 +11,294 @@
 /*  */
 html,
 body {
-    position: relative;
-    height: 100%;
-}
-
-body {
+  position: relative;
+  height: 100%;
 }
 
 .main-container {
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-slide {
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-pagination-bullet-active {
-	color:#cc1f38 !important;
-	background-color:#cc1f38 !important;
+  color: #cc1f38 !important;
+  background-color: #cc1f38 !important;
 }
-/*--------------------------------Radionice.css------------------------------------------------*/
+/*--------------------------------Radionica1------------------------------------------------*/
 
 #radionice {
   background: url(./img/Radionice_compressed.png);
   min-height: 100vh;
   background-size: cover;
 }
-.containerRadionice {
+.containerR1 {
+  min-height: 80vh;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  bottom: 10%;
+  right: 5%;
+  width: 80%;
   display: grid;
-  grid-template-areas: 'heading' 'text';
-  padding: 3% 12%;
-  grid-gap: 5%;
-}
-#radionice h1 {
-  color: white;
-  font-family: Roboto;
-  font-weight: 900;
-  color: white;
-  font-size: 2.5rem;
-  text-align: center;
-  grid-area: heading;
-  text-transform: uppercase;
-}
-.radioniceTxt {
-  grid-area: text;
-  color: white;
-  font-family: Roboto;
-  font-size: 1.5rem;
-  font-weight: 300;
-  padding: 10px;
+  grid-template-areas: "h2 h2 h2" "img txt txt" "empty btn btn";
+  grid-gap: 0%;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
   box-sizing: border-box;
   backdrop-filter: blur(74px);
   border-radius: 15px;
-  height: 70vh;
-  text-align: justify;
-  backdrop-filter: blur(74px);
+  padding: 2%;
+}
+#titleR1 {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding-top: 1%;
+  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4rem;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+#subtitleR1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  grid-area: h2;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+.cardR1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 70%;
+  margin-left: 10%;
+  border-radius: 5px;
+  grid-area: img;
+}
+
+.cardR1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+.cardContainerR1 {
+  padding: 2px 16px;
+}
+#textR1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  grid-area: txt;
+}
+.buttonsR1 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  grid-area: btn;
+  justify-content: space-around;
+}
+#btn1R1,
+#btn2R1,
+#btn3R1 {
+  height: 60%;
+  width: 30%;
+}
+/*--------------------------------Radionica2------------------------------------------------*/
+
+#radionice {
+  background: url(./img/Radionice_compressed.png);
+  min-height: 100vh;
+  background-size: cover;
+}
+.containerR2 {
+  min-height: 80vh;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  bottom: 10%;
+  right: 5%;
+  width: 80%;
+  display: grid;
+  grid-template-areas: "h2 h2 h2" "img txt txt" "empty btn btn";
+  grid-gap: 0%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(74px);
+  border-radius: 15px;
+  padding: 2%;
+}
+#titleR2 {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding-top: 1%;
+  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4rem;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+#subtitleR2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  grid-area: h2;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+.cardR2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 70%;
+  margin-left: 10%;
+  border-radius: 5px;
+  grid-area: img;
+}
+
+.cardR2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.cardContainerR2 {
+  padding: 2px 16px;
+}
+#textR2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  grid-area: txt;
+}
+.buttonsR2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  grid-area: btn;
+  justify-content: space-around;
+}
+#btn1R2,
+#btn2R2,
+#btn3R2 {
+  height: 60%;
+  width: 30%;
 }
 
 /*--------------------------------TechChallenge.css--------------------------------------------*/
 
-#tech-challenge {
+#datingAndPanel {
   background: url(./img/TechChallenge_compressed.png);
   min-height: 100vh;
   background-size: cover;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
-.containerTech {
+.panelDiskusija {
+  min-height: 20vh;
   display: grid;
-  grid-template-areas: 'heading' 'text';
-  position: relative;
-  top: 10%;
-  left: 12%;
-  width: 40%;
-  padding: 2%;
-  grid-gap: 5%;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
   box-sizing: border-box;
   backdrop-filter: blur(74px);
   border-radius: 15px;
+  padding: 2%;
+  display: grid;
+  grid-template-areas: "h2 txt txt txt txt";
+  grid-gap: 2%;
+  margin-bottom: 2%;
 }
-#tech-challenge h1 {
-  color: white;
+#titlePanel {
   font-family: Roboto;
-  color: white;
+  font-style: normal;
+  padding-top: 2vh;
+  font-weight: bold;
   font-size: 2.5rem;
+  color: #ffffff;
   text-align: center;
-  grid-area: heading;
-  font-weight: 900;
-  text-transform: uppercase;
+  grid-area: h2;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
 }
-.techTxt {
-  grid-area: text;
-  color: white;
+#textPanel {
   font-family: Roboto;
-  font-size: 1.5rem;
-  height: 70vh;
+  font-style: normal;
   font-weight: 300;
+  font-size: 1.2rem;
   text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  grid-area: txt;
+}
+.speedDating {
+  min-height: 20vh;
+  display: grid;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(74px);
+  border-radius: 15px;
+  padding: 2%;
+  display: grid;
+  grid-template-areas: "txt txt txt txt h2";
+  grid-gap: 2%;
+}
+#titleSpeed {
+  font-family: Roboto;
+  font-style: normal;
+  padding-top: 2vh;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  grid-area: h2;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+}
+#textSpeed {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  grid-area: txt;
 }
 /*--------------------------------------------------------------------------------------------------*/
-
-
 
 /*-------------------------------AGENDA-------------------------------*/
 
@@ -150,8 +315,9 @@ body {
   font-size: 4rem;
   line-height: 94px;
   text-align: center;
-  color: #14191C;
-  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  color: #14191c;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
   margin-bottom: 50px;
 }
 
@@ -160,10 +326,9 @@ body {
   margin: auto;
 }
 .carousel {
-
   /* Note: backdrop-filter has minimal browser support */
   backdrop-filter: blur(35px);
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 15px;
   height: 500px;
   overflow: hidden;
@@ -190,16 +355,16 @@ body {
   font-size: 32px;
   line-height: 37px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: auto;
   margin-right: auto;
   height: 36px;
 }
 
-
-
-.slider section .maj-11,.maj-12,.maj-13 {
+.slider section .maj-11,
+.maj-12,
+.maj-13 {
   margin-bottom: 4rem;
 }
 
@@ -209,10 +374,10 @@ body {
 
 .slider section ul {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem;
 }
 
 .slider section ul li {
@@ -227,7 +392,7 @@ body {
 
   color: #000000;
 
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .slider section li p {
@@ -238,8 +403,8 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 1.5rem;
 }
 
-
-.left, .right {
+.left,
+.right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -299,9 +464,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
-
 /*------------------------------------------KRAJ AGENDA--------------------------------------------*/
-
 
 /*----------------------------------------------FAQ---------------------------------------------------*/
 #faq {
@@ -318,8 +481,9 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 94px;
   /* identical to box height */
   text-align: center;
-  color: #FFFFFF;
-  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .accordion {
@@ -329,14 +493,14 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .accordion-item {
   background: rgba(255, 255, 255, 0.2);
-  border: 0.5px solid #FFFFFF;
+  border: 0.5px solid #ffffff;
   backdrop-filter: blur(74px);
-/* Note: backdrop-filter has minimal browser support */
+  /* Note: backdrop-filter has minimal browser support */
   border-radius: 15px;
   margin: 1rem 0;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
-  color: #FFF;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
@@ -368,7 +532,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
   line-height: 1.5rem;
   border-top: 1px solid;
-  border-image: linear-gradient(to right, transparent, #FFF, transparent) 1;
+  border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
   font-family: Roboto;
   font-weight: 300;
 }
@@ -482,149 +646,75 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 /*---------------------------media queries------------------------------------------*/
 
 @media (max-width: 1400px) {
-  #tech-challenge {
-    height: 120vh;
-  }
-  .techTxt {
-    height: 90vh;
-  }
 }
 @media (max-width: 1200px) {
 }
 @media (max-width: 960px) {
-  #radionice {
-    height: 100vh;
-  }
-  .containerRadionice {
-    padding: 2% 4%;
-    grid-gap: 1%;
-  }
-  .radioniceTxt {
-    font-size: 1.5rem;
-    height: fit-content !important;
-    margin-bottom: 5%;
-  }
-  #tech-challenge {
-    height: 100vh;
-  }
-  .containerTech {
-    padding: 3% 3%;
-    left: 4%;
-    right: 4%;
-    top: 10%;
-    bottom: 0px;
-    width: 92%;
-    grid-gap: 2%;
-  }
-  #tech-challenge h1 {
-    margin-bottom: 0;
-  }
-  .techTxt {
-    font-size: 1.5rem;
-    height: fit-content !important;
-    padding-bottom: 5%;
-  }
 }
 @media (max-width: 750px) {
-  #radionice {
-    height: min-content;
-  }
-  .containerRadionice {
-    padding: 2% 4%;
-    grid-gap: 1%;
-  }
-  .radioniceTxt {
-    font-size: 1.5rem;
-    height: fit-content !important;
-    margin-bottom: 5%;
-  }
-  #tech-challenge {
-    height: 100vh;
-  }
-  .containerTech {
-    padding: 3% 3%;
-    left: 4%;
-    right: 4%;
-    top: 10%;
-    bottom: 0px;
-    width: 92%;
-    grid-gap: 2%;
-  }
-  #tech-challenge h1 {
-    margin-bottom: 0;
-  }
-  .techTxt {
-    font-size: 1.5rem;
-    height: fit-content !important;
-    padding-bottom: 5%;
-  }
 }
-@media (max-width: 575px) {
-  #radionice {
-    height: min-content;
-  }
-  .containerRadionice {
-    padding: 2% 4%;
-    grid-gap: 1%;
-  }
-  .radioniceTxt {
-    font-size: 1.2rem;
-    height: fit-content !important;
-    margin-bottom: 5%;
-  }
-  #tech-challenge {
-    height: 80vh;
-  }
-  .containerTech {
-    padding: 3% 3%;
-    left: 4%;
-    right: 4%;
-    top: 20px;
-    bottom: 0px;
-    width: 92%;
-    grid-gap: 2%;
-  }
-  #tech-challenge h1 {
-    margin-bottom: 0;
-  }
-  .techTxt {
-    font-size: 1.2rem;
-    height: fit-content !important;
-    padding-bottom: 5%;
-  }
+@media (max-width: 560px) {
 }
 @media (max-width: 360px) {
-  #radionice {
-    height: fit-content;
+  #titleR1,
+  #titleR2 {
+    font-size: 2.3rem;
+    padding-top: 8%;
   }
-  .containerRadionice {
-    padding: 2% 2%;
-    grid-gap: 1%;
+  .containerR1,
+  .containerR2 {
+    display: grid;
+    left: 1%;
+    right: 1%;
+    width: 98%;
+    grid-template-areas: "h2 h2 h2" "img txt txt" " txt txt txt" "btn btn btn";
   }
-  .radioniceTxt {
+
+  #subtitleR1 {
+    font-size: 1.5rem;
+    float: left;
+  }
+  #subtitleR2 {
+    font-size: 1.5rem;
+    float: right;
+  }
+  .buttonsR1,
+  .buttonsR2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    grid-area: btn;
+    justify-content: space-between;
+  }
+  #textR1,
+  #textR2 {
     font-size: 1rem;
-    height: fit-content !important;
-    margin-bottom: 5%;
   }
-  #tech-challenge {
-    height: 100vh;
+  #titleSpeed,
+  #titlePanel {
+    font-size: 1.5rem;
+    padding-top: 0%;
   }
-  .containerTech {
-    padding: 3% 3%;
-    left: 2%;
-    right: 2%;
-    top: 20px;
-    bottom: 20px;
-    width: 96%;
-    grid-gap: 2%;
+
+  #textSpeed,
+  #textPanel {
+    font-size: 0.8rem;
   }
-  #tech-challenge h1 {
-    margin-bottom: 0;
+  #datingAndPanel {
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
   }
-  .techTxt {
-    font-size: 1rem;
-    height: fit-content !important;
-    padding-bottom: 10%;
+  .panelDiskusija,
+  .speedDating {
+    height: 40vh;
+  }
+  .panelDiskusija {
+    margin-top: 20%;
+    grid-template-areas: "h2" "txt";
+  }
+  .speedDating {
+    grid-template-areas: "h2" "txt";
   }
 }
 
@@ -681,7 +771,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .bar:before,
 .bar:after {
-  content: '';
+  content: "";
   position: absolute;
   width: inherit;
   height: inherit;
@@ -775,7 +865,7 @@ ul {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 300;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   transition: color 0.5s;
   opacity: 0;
@@ -975,7 +1065,7 @@ ul {
 
 #header {
   height: 100vh;
-  background: url('./img/headerBg.png') no-repeat center;
+  background: url("./img/headerBg.png") no-repeat center;
   background-size: cover;
   position: relative;
   transform-origin: left;
@@ -1011,7 +1101,7 @@ ul {
 #header .title h1 {
   line-height: 100%;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 3.5rem;
@@ -1034,7 +1124,7 @@ button {
   border-radius: 1rem;
   letter-spacing: 0.1rem;
   padding: 1rem 2rem 1rem 2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 1.2rem;
@@ -1103,7 +1193,7 @@ button:hover {
 
 #o-projektu {
   min-height: 100vh;
-  background: url('./img/oProjektuBg.png') no-repeat center;
+  background: url("./img/oProjektuBg.png") no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -1124,7 +1214,7 @@ button:hover {
 
 .o-projektu-wrapper .title h2 {
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 3rem;
@@ -1135,7 +1225,7 @@ button:hover {
 }
 
 .o-projektu-wrapper .text p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.3rem;
