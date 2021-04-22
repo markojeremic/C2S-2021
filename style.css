@@ -549,8 +549,54 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 #tim-i-footer #footer {
   height: 20vh;
   background-color: #14191c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
+#footer-logo {
+  margin-top: 1.5rem;
+  margin-left: 2.5rem;
+  width: 50%;
+}
+#footer-logo img {
+  width: 250px;
+  height: 90px;
+}
+
+#kontakt-ikonice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2.5rem;
+  width: 20%;
+}
+
+#kontakt-ikonice i {
+  color: #fff;
+  transition: color 0.5s;
+}
+
+#kontakt-ikonice a {
+    height: 3rem;
+    display: flex;
+    width: 3rem;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    background: linear-gradient(
+      168.53deg,
+      rgba(234, 255, 254, 0.5) 0%,
+      rgba(201, 217, 241, 0.5) 97.46%
+    );
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+#kontakt-ikonice a:hover > i {
+  color: #cc1f38;
+}
 /*---------------------------media queries------------------------------------------*/
 
 @media (max-width: 1400px) {
