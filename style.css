@@ -22,9 +22,9 @@ body {
   margin-right: auto;
 }
 
-.main-container,
-.swiper-wrapper,
-.swiper-slide {
+.main-container > .swiper-wrapper > .swiper-slide {
+  /* mozda baguje */
+  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
