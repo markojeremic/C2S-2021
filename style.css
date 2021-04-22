@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;900&display=swap');
 
 /*font-family: 'Roboto', sans-serif;*/
 
@@ -58,7 +58,7 @@ body {
   right: 5%;
   width: 80%;
   display: grid;
-  grid-template-areas: "h2 h2 h2" "img txt txt" "empty btn btn";
+  grid-template-areas: 'h2 h2 h2' 'img txt txt' 'empty btn btn';
   grid-gap: 0%;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
@@ -148,7 +148,7 @@ img {
   right: 5%;
   width: 80%;
   display: grid;
-  grid-template-areas: "h2 h2 h2" "img txt txt" "empty btn btn";
+  grid-template-areas: 'h2 h2 h2' 'img txt txt' 'empty btn btn';
   grid-gap: 0%;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
@@ -239,7 +239,7 @@ img {
   border-radius: 15px;
   padding: 2%;
   display: grid;
-  grid-template-areas: "h2 txt txt txt txt";
+  grid-template-areas: 'h2 txt txt txt txt';
   grid-gap: 2%;
   margin-bottom: 2%;
 }
@@ -274,7 +274,7 @@ img {
   border-radius: 15px;
   padding: 2%;
   display: grid;
-  grid-template-areas: "txt txt txt txt h2";
+  grid-template-areas: 'txt txt txt txt h2';
   grid-gap: 2%;
 }
 #titleSpeed {
@@ -677,8 +677,13 @@ img {
 
 #tim-i-footer #team .swiper-container {
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  transform: translateY(-2rem);
+}
+
+@media (max-width: 575.98px) {
+  #tim-i-footer #team .swiper-container {
+    transform: translateY(-1rem);
+  }
 }
 
 #tim-i-footer #team .swiper-container .swiper-slide {
@@ -722,6 +727,13 @@ img {
   margin-left: 2.5rem;
   width: 50%;
 }
+
+@media (max-width: 575.98px) {
+  #footer-logo {
+    display: none;
+  }
+}
+
 #footer-logo img {
   width: 250px;
   height: 90px;
@@ -784,7 +796,7 @@ img {
     left: 1%;
     right: 1%;
     width: 98%;
-    grid-template-areas: "h2 h2 h2" "img txt txt" " txt txt txt" "btn btn btn";
+    grid-template-areas: 'h2 h2 h2' 'img txt txt' ' txt txt txt' 'btn btn btn';
   }
 
   #subtitleR1 {
@@ -828,10 +840,10 @@ img {
   }
   .panelDiskusija {
     margin-top: 20%;
-    grid-template-areas: "h2" "txt";
+    grid-template-areas: 'h2' 'txt';
   }
   .speedDating {
-    grid-template-areas: "h2" "txt";
+    grid-template-areas: 'h2' 'txt';
   }
 }
 
@@ -888,7 +900,7 @@ img {
 
 .bar:before,
 .bar:after {
-  content: "";
+  content: '';
   position: absolute;
   width: inherit;
   height: inherit;
@@ -982,7 +994,7 @@ ul {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   transition: color 0.5s;
   opacity: 0;
@@ -1009,6 +1021,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.navbar-active-social-media.footer {
+  position: initial;
+  height: 100%;
 }
 
 .navbar-active-social-media a {
@@ -1182,7 +1199,7 @@ ul {
 
 #header {
   height: 100vh;
-  background: url("./img/headerBg.png") no-repeat center;
+  background: url('./img/headerBg.png') no-repeat center;
   background-size: cover;
   position: relative;
   transform-origin: left;
@@ -1230,7 +1247,7 @@ ul {
 #header .title h1 {
   line-height: 100%;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 3.5rem;
@@ -1292,7 +1309,7 @@ button {
   border-radius: 1rem;
   letter-spacing: 0.1rem;
   padding: 1rem 2rem 1rem 2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 1.2rem;
@@ -1361,7 +1378,7 @@ button:hover {
 
 #o-projektu {
   min-height: 100vh;
-  background: url("./img/oProjektuBg.png") no-repeat center;
+  background: url('./img/oProjektuBg.png') no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -1382,7 +1399,7 @@ button:hover {
 
 .o-projektu-wrapper .title h2 {
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 3rem;
@@ -1393,7 +1410,7 @@ button:hover {
 }
 
 .o-projektu-wrapper .text p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.3rem;
