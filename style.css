@@ -15,8 +15,6 @@ body {
     height: 100%;
 }
 
-body {
-}
 
 .main-container {
     width: 100%;
@@ -25,7 +23,7 @@ body {
     margin-right: auto;
 }
 
-.swiper-slide {
+.main-container > .swiper-wrapper > .swiper-slide { /* mozda baguje */
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -415,6 +413,80 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(74px);
   border-radius: 15px;
   margin-bottom: calc((100% - 91.2%) / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-generalni {
+  position: relative;
+	overflow: hidden;
+	width: 70%;
+  height: 60%;
+  
+}
+.general-logo{
+  position: relative;
+	background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 150px !important;
+  height: 261px !important;
+} 
+.swiper-generalni .swiper-wrapper {
+	position: relative;
+	width: 10000%;
+}
+
+.swiper-generalni .swiper-slide {
+	position: relative;
+	background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 292px !important;
+  height: 261px !important;
+}
+.swiper-naturalni {
+  position: relative;
+	overflow: hidden;
+	width: 70%;
+  height: 60%;
+  
+}
+
+.swiper-naturalni .swiper-wrapper {
+	position: relative;
+	width: 10000%;
+}
+
+.swiper-naturalni .swiper-slide {
+	position: relative;
+	background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 292px !important;
+  height: 261px !important;
+}
+.swiper-medijski {
+  position: relative;
+	overflow: hidden;
+	width: 70%;
+  height: 60%;
+  
+}
+
+.swiper-medijski .swiper-wrapper {
+	position: relative;
+	width: 10000%;
+}
+
+.swiper-medijski .swiper-slide {
+	position: relative;
+	background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 292px !important;
+  height: 261px !important;
 }
 
 #tim-i-footer {
