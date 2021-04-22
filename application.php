@@ -1,102 +1,108 @@
 <link rel="stylesheet" href="./style.css" />
 <link rel="stylesheet" type="text/css">
 
-<section id="" style = "margin-left:20px">
-<h2>Prijava</h2>
-
-
-
-<form action="includes/application.inc.php" method="post" enctype="multipart/form-data"> 
-    <div class= "basic-info" style = "margin-bottom: 50px">
-        <label for="fullname">Ime i prezime:</label>
-        <input type="text" name="fullname" placeholder=" Ime i prezime..."  autocomplete="off" > <br>
-
-        <label for="mail">Email:</label>
-        <input id="mail" type="email" name="email" placeholder=" Email..." style="margin-left: 60px;" > <br>
-
-        <label for="fullname">Broj telefona:</label>
-        <input type="text" name="phone_number" placeholder=" Broj telefona... " style="margin-left: 15px;" autocomplete="off">  <br>
-
-        <label for="faculty">Fakultet:</label>
-        <input type="text" name="faculty" placeholder=" Fakultet..." autocomplete="off" style="margin-left: 48px;margin-bottom: 15px;" ><br>
-
-
-        <label for="grade">Godina studija</label>
-        <select name="grade" id="grade" >
-            <option value="Prva">Prva</option>
-            <option value="Druga">Druga</option>
-            <option value="Treca">Treca</option>
-            <option value="Cetvrta">Cetvrta</option>
-            <option value="Apsolvent">Apsolvent</option>
-            <option value="Master studije">Master studije</option>
-            <option value="Doktorske studije">Doktorske studije</option>
-           
-        </select><br>
-
-        <div style="margin-top:20px ;">Zašto ste odlučili da učestvujete na ovom projektu?</div>
-        <textarea name="attend_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea>
-      
+<div class="prijava-wrapper">
+    <div class="title">
+    <h2>Prijava</h2>
     </div>
-
-    
-    <div class="prijava-radionice" style = "display:flex;">
-        <div style="margin:20px;">
-        <input type="checkbox" id="radionica1" name="radionica1" value="da"  onclick="myFunction(this.id)">
-        <label for="radionica1"> Radionica 1</label><br>
-        <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem</p>
-        </div>
+    <form action="includes/application.inc.php" method="post" enctype="multipart/form-data"> 
+        <div class= "basic-info" style = "margin-bottom: 50px">
         
-        <div style="margin:20px;">
-        <input type="checkbox" id="radionica2" name="radionica2" value="da"  onclick="myFunction(this.id)">
-        <label for="radionica2">Radionica2</label><br>
-        <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem, enim.</p>
-        </div>
-        <div style="margin:20px;">
-        <input type="checkbox" id="radionica3" name="radionica3" value="da"  onclick="myFunction(this.id)">
-        <label for="radionica3">Radionica3</label>
-        <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem, enim.</p>
-        <!-- <br>
-        <label for="none">Ne želim da prisustvujem radionicama</label>
-        <input type="checkbox" name="none"> -->
-        </div>
+            <div class="inputfield">
+                <label for="fullname">Ime i prezime:</label>
+                <input type="text" name="fullname" placeholder=" Ime i prezime..."  autocomplete="off" > <br>
+            </div>
 
-    </div>
+            <div class="inputfield">
+                <label for="mail">Email:</label>
+                <input id="mail" type="email" name="email" placeholder=" Email..." style="margin-left: 60px;" > <br>
+            </div>
 
-    <div id = "extraquestions" style="display:none; margin-bottom:50px ;">
-       
-        <div style="margin-top:20px ;">Šta Vas je motivisalo da odaberete ove radionice? </div>
-        <textarea name="radionice_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea><br>
+            <div class="inputfield">
+                <label for="fullname">Broj telefona:</label>
+                <input type="text" name="phone_number" placeholder=" Broj telefona... " style="margin-left: 15px;" autocomplete="off">  <br>
+            </div>
 
-        <div style="margin-top:20px ;">Koliko ste upoznati sa tehnologijama koje se obrađuju na radionicama koje ste odabrali?</div>
-        <textarea name="radionice_experience" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea><br>
+            <div class="inputfield">
+                <label for="faculty">Fakultet:</label>
+                <input type="text" name="faculty" placeholder=" Fakultet..." autocomplete="off" style="margin-left: 48px;margin-bottom: 15px;" ><br>
+            </div>
+
+            <div class="inputfield">
+                <label for="grade">Godina studija</label>
+                <div class="custom_select">
+                    <select name="grade" id="grade" >
+                        <option value="Prva">Prva</option>
+                        <option value="Druga">Druga</option>
+                        <option value="Treca">Treca</option>
+                        <option value="Cetvrta">Cetvrta</option>
+                        <option value="Apsolvent">Apsolvent</option>
+                        <option value="Master studije">Master studije</option>
+                        <option value="Doktorske studije">Doktorske studije</option>
+                    
+                    </select>
+                </div>
+            </div>
+            <div style="margin-top:20px ;">Zašto ste odlučili da učestvujete na ovom projektu?</div>
+            <textarea name="attend_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea>
         
+        </div>
 
-    </div>
+        
+        <div class="prijava-radionice" style = "display:flex;">
+            <div style="margin:20px;">
+            <input type="checkbox" id="radionica1" name="radionica1" value="da"  onclick="myFunction(this.id)">
+            <label for="radionica1"> Radionica 1</label><br>
+            <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem</p>
+            </div>
+            
+            <div style="margin:20px;">
+            <input type="checkbox" id="radionica2" name="radionica2" value="da"  onclick="myFunction(this.id)">
+            <label for="radionica2">Radionica2</label><br>
+            <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem, enim.</p>
+            </div>
+        
+        </div>
 
-    <div class="prijava-questions">
-    <label for="panel">Da li želite da učestvujete na panelu?</label>
-    <input type="checkbox" id="panel" name="panel" value="da" ><br><br>
+        <div class="inputField" id = "extraquestions" style="display:none; margin-bottom:50px ;">
+        
+            <div style="margin-top:20px ;">Šta Vas je motivisalo da odaberete ove radionice? </div>
+            <textarea name="radionice_why" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea><br>
 
-    <label for="speed_dating"> Da li želite da učestvujete na speed dating-u sa kompanijom Levi9? </label>
-    <input type="checkbox" id="speed_dating" name="speed_dating" value="da" ><br><br>
+            <div style="margin-top:20px ;">Koliko ste upoznati sa tehnologijama koje se obrađuju na radionicama koje ste odabrali?</div>
+            <textarea name="radionice_experience" placeholder="" autocomplete="off" cols="50" rows="4" maxlength="254" ></textarea><br>
+        </div>
 
-    <label for="microsoft_teams">Da li ste do sad koristili Microsoft Teams platformu?</label>
-    <input type="checkbox" id="microsoft_teams" name="microsoft_teams" value="da" ><br><br>
+        <div class="prijava-questions">
 
-    <label for="spam">Da li želite da dobijate obaveštenja o drugim projektima i aktivnostima FONIS-a? </label>
-    <input type="checkbox" id="spam" name="spam" value="da" ><br><br>
+            <div class="inputfield">
+                <label for="panel">Da li želite da učestvujete na panelu?</label>
+                <input type="checkbox" id="panel" name="panel" value="da" ><br><br>
+            </div>
 
+            <div class="inputfield">
+                <label for="speed_dating"> Da li želite da učestvujete na speed dating-u sa kompanijom Levi9? </label>
+                <input type="checkbox" id="speed_dating" name="speed_dating" value="da" ><br><br>
+                </div>
 
-    <label for="cv">Priložite svoj CV </label>
-    <input type="file" id="cv" name="cv" accept=".pdf"><br>
+            <div class="inputfield">
+                <label for="microsoft_teams">Da li ste do sad koristili Microsoft Teams platformu?</label>
+                <input type="checkbox" id="microsoft_teams" name="microsoft_teams" value="da" ><br><br>
+            </div>
 
-    <button type="submit" name="submit">Sačuvaj</button>
-    </div>
+            <div class="inputfield">
+                <label for="spam">Da li želite da dobijate obaveštenja o drugim projektima i aktivnostima FONIS-a? </label>
+                <input type="checkbox" id="spam" name="spam" value="da" ><br><br>
+            </div>
 
+            <label for="cv">Priložite svoj CV </label>
+            <input type="file" id="cv" name="cv" accept=".pdf"><br>
 
+            <button type="submit" name="submit">Sačuvaj</button>
+        </div>
 
-</form>
-
+    </form>
+</div>
 <?php
 // Moramo nekako pametnije da namestimo ovo ispisivanje gresaka, 
 if(isset($_GET["error"])){
@@ -114,8 +120,6 @@ if(isset($_GET["error"])){
     }
 }
 ?>
-</section>
-
 
 
 
@@ -127,10 +131,72 @@ body{
     color: white;
  
 }
+
 textarea{
     resize: none;
        
 }
+.prijava-wrapper {
+
+  max-width: 1500px;
+  width: 100%;
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.prijava-wrapper .form  {
+  width: 100%;
+}
+.prijava-wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.prijava-wrapper .form  .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.prijava-wrapper .form .inputfield .input,
+.prijava-wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.prijava-wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+@media (max-width:700px) {
+  .prijava-wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .prijava-radionice{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .prijava-wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .prijava-wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+
+
+
+
 #extraquestions{
     margin-top: 20px;
     text-align: center;
@@ -140,20 +206,20 @@ textarea{
     margin-top: 20px;
     margin-bottom: 150px;
 }
-.prijava-radionice{
+.prijava-radionice {
     display: grid;
     grid-template-areas: 'heading' 'text';
     position: relative;
-    margin-left: 300px;
+    text-align: center;
     top: 10%;
-    left: 12%;
+    left: 30%;
     width: 40%;
     padding: 2%;
     grid-gap: 5%;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid #ffffff;
     box-sizing: border-box;
-    backdrop-filter: blur(74px);
+    
     border-radius: 15px;
 }
 
@@ -196,6 +262,7 @@ textarea{
 
     .basic-info{
         text-align: center;
+        width: 100%;
     }
 
  </style> 
