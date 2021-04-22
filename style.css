@@ -11,38 +11,38 @@
 /*  */
 html,
 body {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
-
 
 .main-container {
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.main-container > .swiper-wrapper > .swiper-slide { /* mozda baguje */
+.main-container > .swiper-wrapper > .swiper-slide {
+  /* mozda baguje */
 
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-pagination-bullet-active {
-	color:#cc1f38 !important;
-	background-color:#cc1f38 !important;
+  color: #cc1f38 !important;
+  background-color: #cc1f38 !important;
 }
 /*--------------------------------Radionice.css------------------------------------------------*/
 
@@ -131,8 +131,6 @@ body {
 }
 /*--------------------------------------------------------------------------------------------------*/
 
-
-
 /*-------------------------------AGENDA-------------------------------*/
 
 #agenda {
@@ -148,8 +146,9 @@ body {
   font-size: 4rem;
   line-height: 94px;
   text-align: center;
-  color: #14191C;
-  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  color: #14191c;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
   margin-bottom: 50px;
 }
 
@@ -158,10 +157,9 @@ body {
   margin: auto;
 }
 .carousel {
-
   /* Note: backdrop-filter has minimal browser support */
   backdrop-filter: blur(35px);
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 15px;
   height: 500px;
   overflow: hidden;
@@ -188,16 +186,16 @@ body {
   font-size: 32px;
   line-height: 37px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: auto;
   margin-right: auto;
   height: 36px;
 }
 
-
-
-.slider section .maj-11,.maj-12,.maj-13 {
+.slider section .maj-11,
+.maj-12,
+.maj-13 {
   margin-bottom: 4rem;
 }
 
@@ -207,10 +205,10 @@ body {
 
 .slider section ul {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem;
 }
 
 .slider section ul li {
@@ -225,7 +223,7 @@ body {
 
   color: #000000;
 
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .slider section li p {
@@ -236,8 +234,8 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 1.5rem;
 }
 
-
-.left, .right {
+.left,
+.right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -297,9 +295,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
-
 /*------------------------------------------KRAJ AGENDA--------------------------------------------*/
-
 
 /*----------------------------------------------FAQ---------------------------------------------------*/
 #faq {
@@ -316,8 +312,9 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 94px;
   /* identical to box height */
   text-align: center;
-  color: #FFFFFF;
-  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .accordion {
@@ -327,14 +324,14 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .accordion-item {
   background: rgba(255, 255, 255, 0.2);
-  border: 0.5px solid #FFFFFF;
+  border: 0.5px solid #ffffff;
   backdrop-filter: blur(74px);
-/* Note: backdrop-filter has minimal browser support */
+  /* Note: backdrop-filter has minimal browser support */
   border-radius: 15px;
   margin: 1rem 0;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
-  color: #FFF;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
@@ -366,7 +363,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
   line-height: 1.5rem;
   border-top: 1px solid;
-  border-image: linear-gradient(to right, transparent, #FFF, transparent) 1;
+  border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
   font-family: Roboto;
   font-weight: 300;
 }
@@ -420,27 +417,26 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .swiper-generalni {
   position: relative;
-	overflow: hidden;
-	width: 70%;
+  overflow: hidden;
+  width: 70%;
   height: 60%;
-  
 }
-.general-logo{
+.general-logo {
   position: relative;
-	background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 150px !important;
   height: 261px !important;
-} 
+}
 .swiper-generalni .swiper-wrapper {
-	position: relative;
-	width: 10000%;
+  position: relative;
+  width: 10000%;
 }
 
 .swiper-generalni .swiper-slide {
-	position: relative;
-	background-repeat: no-repeat;
+  position: relative;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 292px !important;
@@ -448,20 +444,19 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .swiper-naturalni {
   position: relative;
-	overflow: hidden;
-	width: 70%;
+  overflow: hidden;
+  width: 70%;
   height: 60%;
-  
 }
 
 .swiper-naturalni .swiper-wrapper {
-	position: relative;
-	width: 10000%;
+  position: relative;
+  width: 10000%;
 }
 
 .swiper-naturalni .swiper-slide {
-	position: relative;
-	background-repeat: no-repeat;
+  position: relative;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 292px !important;
@@ -469,20 +464,19 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .swiper-medijski {
   position: relative;
-	overflow: hidden;
-	width: 70%;
+  overflow: hidden;
+  width: 70%;
   height: 60%;
-  
 }
 
 .swiper-medijski .swiper-wrapper {
-	position: relative;
-	width: 10000%;
+  position: relative;
+  width: 10000%;
 }
 
 .swiper-medijski .swiper-slide {
-	position: relative;
-	background-repeat: no-repeat;
+  position: relative;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 292px !important;
@@ -1067,6 +1061,18 @@ ul {
 .img-wrapper {
   min-width: 17rem;
   width: 60%;
+  animation: fade-in 1s ease-out 0s 1 alternate both;
+}
+
+@keyframes fade-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0.2;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .img-wrapper img {
@@ -1088,13 +1094,52 @@ ul {
   font-weight: 900;
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
-  color: #fff;
-  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
-    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  animation: blurToSharpWhite 1.6s ease-in 1s 1 alternate both;
+}
+
+#header .title h1 span {
+  animation: blurToSharpRed 1.6s ease-in 1s 1 alternate both;
+}
+
+@keyframes blurToSharpWhite {
+  0% {
+    color: transparent;
+    text-shadow: 0 0 15px rgba(255, 255, 255);
+  }
+
+  100% {
+    opacity: 1;
+    color: #fff;
+    text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07);
+  }
+}
+
+@keyframes blurToSharpRed {
+  0% {
+    color: transparent;
+    text-shadow: 0 0 15px rgba(204, 30, 57);
+  }
+
+  100% {
+    color: #cc1e39;
+    text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07);
+  }
 }
 
 .button-wrapper {
   padding-left: 0.4rem;
+  animation: leftToRight 1.5s cubic-bezier(0.35, 1.3, 1, 1) 1.5s 1 alternate
+    both;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 button {
