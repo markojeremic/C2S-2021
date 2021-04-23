@@ -816,7 +816,22 @@ img {
   transform: translateY(-2rem);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 800.98px) {  
+  #partneri h3{
+    font-size: 35px;
+  }
+  #tim-i-footer #team .swiper-container {
+    transform: translateY(-1rem);
+  }
+}
+@media (max-width: 575.98px) {  
+  #partneri h2{
+    font-size: 40px;
+    line-height: 120px;
+  }
+  #partneri h3{
+    font-size: 20px;
+  }
   #tim-i-footer #team .swiper-container {
     transform: translateY(-1rem);
   }
