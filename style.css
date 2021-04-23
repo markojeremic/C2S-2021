@@ -1368,12 +1368,13 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  .navbar-active-social-media {
+  .navbar-active-social-media, .navbar-active-social-media2.footer {
     bottom: 2rem;
     width: 100%;
     align-items: center;
     justify-content: center;
   }
+  
 }
 
 #header {
