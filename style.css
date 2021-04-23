@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;700;900&display=swap');
 
 /*font-family: 'Roboto', sans-serif;*/
 
@@ -710,6 +710,25 @@ img {
   background-size: cover;
   width: 292px !important;
   height: 261px !important;
+}
+
+#tim-i-footer #team .swiper-container .swiper-slide .team-card .core-ime-i-prezime {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin: 0.2rem;
+}
+
+#tim-i-footer #team .swiper-container .swiper-slide .team-card .core-uloga{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.25rem;
 }
 
 /* Footer treba da se uradi */
