@@ -674,7 +674,7 @@ img {
   background: url(img/partneri1.png) no-repeat;
 }
 
-#partneri h2 {
+#partneri h2, #partneri h3 {
   position: relative;
   font-family: Roboto;
   font-style: normal;
@@ -686,9 +686,16 @@ img {
   text-shadow: 8px -8px 10px rgba(0, 0, 0, 0.07),
     -30px 30px 30px rgba(167, 162, 162, 0.05),
     -10px 10px 10px rgba(167, 162, 162, 0.1);
-  margin-bottom: 3.5%;
+  margin-bottom: 2%;
   padding-top: 2%;
 }
+
+#partneri h3{
+  font-size: 40px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
 
 #partneri #partner-bars {
   position: relative;
