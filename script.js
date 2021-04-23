@@ -20,21 +20,21 @@
   //Caroussel panel
 
   const panel = new Swiper('.swiper-panel', {
-    speed: 5000,
-    spaceBetween: 0,
+    speed: 2000,
+    spaceBetween: 50,
     initialSlide: 2,
     autoHeight: false,
     direction: 'horizontal',
     loop: true,
     autoplay: {
-      delay: 1,
+      delay: 2000,
       disableOnInteraction: false,
     },
     loop: true,
-    loopedSlides: 50,
+    loopedSlides: 0,
 
     effect: 'slide',
-    slidesPerView: 2,
+    slidesPerView: 'auto',
     centeredSlides: true,
     grabCursor: true,
   })
@@ -162,6 +162,13 @@
     
   }, function () {
     medijski.autoplay.start();
+  }
+  );
+  $('.swiper-panel').hover(function () {
+    panel.autoplay.stop();
+    
+  }, function () {
+    panel.autoplay.start();
   }
   );
 
@@ -394,4 +401,9 @@
 
     });
   });
+
+  document.addEventListener('dblclick', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  })
 })()

@@ -269,18 +269,11 @@ img {
 .swiper-panel {
   position: relative;
   overflow: hidden;
-  width: 70%;
-  height: 60%;
+  width: 312px;
+  height: 20% !important;
   margin: auto;
 }
-.general-logo {
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 150px !important;
-  height: 261px !important;
-}
+
 .swiper-panel .swiper-wrapper {
   position: relative;
   width: 10000%;
@@ -291,8 +284,48 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  width: 312px !important;
+}
+
+
+.swiper-panel .swiper-slide .team-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  padding-top: 5px;
+  box-sizing: border-box;
+  backdrop-filter: blur(74px);
+  border-radius: 15px;
+}
+
+.swiper-panel .swiper-slide .team-card .team-card-img {
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 292px !important;
   height: 261px !important;
+}
+
+.swiper-panel .swiper-slide .team-card .core-ime-i-prezime {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin: 0.2rem;
+}
+
+.swiper-panel .swiper-slide .team-card .core-uloga{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.25rem;
 }
 
 .speedDating {
