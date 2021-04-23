@@ -443,7 +443,7 @@ img {
 }
 .arrow i {
   font-size: 70px;
-  -webkit-user-select: none;
+  user-select: none;
   color: #333;
 }
 .left {
@@ -617,10 +617,10 @@ img {
   font-weight: 300;
 }
 
-@media screen and (max-width: 426.98px) {
+/* @media screen and (max-width: 426.98px) {
   #generalni-pokrovitelj h2 {
   }
-}
+} */
 
 @media screen and (max-width: 767.98px) {
   #generalni-pokrovitelj h2 {
