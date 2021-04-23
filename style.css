@@ -134,7 +134,8 @@ img {
 }
 /*--------------------------------Radionica2------------------------------------------------*/
 
-#radionica1, #radionica2 {
+#radionica1,
+#radionica2 {
   background: url(./img/Radionice_compressed.png);
   min-height: 100vh;
   background-size: cover;
@@ -579,18 +580,18 @@ img {
 
 #generalni-pokrovitelj h2 {
   position: relative;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 94px;
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 8px -8px 10px rgba(0, 0, 0, 0.07),
-      -30px 30px 30px rgba(167, 162, 162, 0.05),
-      -10px 10px 10px rgba(167, 162, 162, 0.1);
-    margin-bottom: 3.5%;
-    padding-top: 2%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 94px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 8px -8px 10px rgba(0, 0, 0, 0.07),
+    -30px 30px 30px rgba(167, 162, 162, 0.05),
+    -10px 10px 10px rgba(167, 162, 162, 0.1);
+  margin-bottom: 3.5%;
+  padding-top: 2%;
 }
 
 #generalni-pokrovitelj .levi9 {
@@ -601,9 +602,9 @@ img {
 
 #generalni-pokrovitelj .levi9-container {
   background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   backdrop-filter: blur(74px);
-/* Note: backdrop-filter has minimal browser support */
+  /* Note: backdrop-filter has minimal browser support */
   border-radius: 15px;
   position: absolute;
   width: 60%;
@@ -612,14 +613,13 @@ img {
   margin-top: 1.5rem;
   padding: 1rem;
   font-family: Roboto;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 300;
 }
 
 @media screen and (max-width: 426.98px) {
- #generalni-pokrovitelj h2 {
-
- }
+  #generalni-pokrovitelj h2 {
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -634,7 +634,6 @@ img {
 }
 
 /*-----------------------------------------------KRAJ GENERALNI POKROVITELJ------------------------------------*/
-
 
 #partneri {
   position: relative;
@@ -809,7 +808,12 @@ img {
   height: 261px !important;
 }
 
-#tim-i-footer #team .swiper-container .swiper-slide .team-card .core-ime-i-prezime {
+#tim-i-footer
+  #team
+  .swiper-container
+  .swiper-slide
+  .team-card
+  .core-ime-i-prezime {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -819,7 +823,7 @@ img {
   margin: 0.2rem;
 }
 
-#tim-i-footer #team .swiper-container .swiper-slide .team-card .core-uloga{
+#tim-i-footer #team .swiper-container .swiper-slide .team-card .core-uloga {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -1128,7 +1132,8 @@ ul {
   animation: appear 0.5s forwards ease var(--i);
 }
 
-.navbar-active-social-media, .navbar-active-social-media2.footer {
+.navbar-active-social-media,
+.navbar-active-social-media2.footer {
   position: fixed;
   bottom: 3rem;
   right: 0;
@@ -1139,9 +1144,8 @@ ul {
   justify-content: flex-start;
 }
 
-
-
-.navbar-active-social-media a, .navbar-active-social-media2 a {
+.navbar-active-social-media a,
+.navbar-active-social-media2 a {
   height: 3.5rem;
   display: flex;
   width: 3.5rem;
@@ -1173,12 +1177,14 @@ ul {
   }
 }
 
-.navbar-active-social-media a i, .navbar-active-social-media2 a i {
+.navbar-active-social-media a i,
+.navbar-active-social-media2 a i {
   color: #fff;
   transition: color 0.5s;
 }
 
-.navbar-active-social-media a:hover > i, .navbar-active-social-media2 a:hover > i {
+.navbar-active-social-media a:hover > i,
+.navbar-active-social-media2 a:hover > i {
   color: #cc1f38;
 }
 
@@ -1411,7 +1417,7 @@ ul {
 
 @keyframes leftToRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   to {
     transform: translateX(0);
@@ -1503,16 +1509,16 @@ button:hover {
 
 .o-projektu-wrapper {
   position: absolute;
-  min-width: 24rem;
+  min-width: 28rem;
   width: 30%;
   left: 55%;
-  bottom: 4rem;
+  bottom: 5rem;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #fff;
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   border-radius: 1rem;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .o-projektu-wrapper .title h2 {
@@ -1524,15 +1530,15 @@ button:hover {
   color: #14191c;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .o-projektu-wrapper .text p {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
   color: rgba(20, 25, 28, 0.8);
 }
 
@@ -1550,11 +1556,11 @@ button:hover {
 @media (max-width: 426.98px) {
   .o-projektu-wrapper {
     min-width: initial;
-    width: 90% !important;
+    width: 96% !important;
     max-height: 90%;
     left: 50%;
     transform: translateX(-50%);
-    top: 5%;
+    top: 2%;
     bottom: initial;
   }
 
