@@ -7,13 +7,38 @@
   const slides = [
     'header',
     'o-projektu',
-    'radionice',
-    'tech-challenge',
+    'radionica1',
+    'radionica2',
+    'datingAndPanel',
     'agenda',
     'faq',
+    'generalni-pokrovitelj',
     'partneri',
     'tim-i-footer',
   ]
+
+  //Caroussel panel
+
+  const panel = new Swiper('.swiper-panel', {
+    speed: 5000,
+    spaceBetween: 0,
+    initialSlide: 2,
+    autoHeight: false,
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    loopedSlides: 50,
+
+    effect: 'slide',
+    slidesPerView: 2,
+    centeredSlides: true,
+    grabCursor: true,
+  })
+  
 
   // Tim
 
@@ -163,6 +188,7 @@
     const containerWrapper7 = document.querySelector('.container-wrapper-7')
     const containerWrapper8 = document.querySelector('.container-wrapper-8')
     const containerWrapper9 = document.querySelector('.container-wrapper-9')
+    const containerWrapper10 = document.querySelector('.container-wrapper-10')
 
     if (containerWrapper1.classList.contains('should-change'))
       containerWrapper1.classList.remove('should-change')
@@ -182,6 +208,8 @@
       containerWrapper8.classList.remove('should-change')
     if (containerWrapper9.classList.contains('should-change'))
       containerWrapper9.classList.remove('should-change')
+    if (containerWrapper10.classList.contains('should-change'))
+      containerWrapper10.classList.remove('should-change')
 
     switch (swiper.activeIndex) {
       case 0:
@@ -220,7 +248,10 @@
         !containerWrapper9.classList.contains('should-change') &&
           containerWrapper9.classList.add('should-change')
         break
-
+      case 9:
+        !containerWrapper10.classList.contains('should-change') &&
+          containerWrapper10.classList.add('should-change')
+        break
       default:
         break
     }
